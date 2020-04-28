@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+
+        .grid {
+            display: grid;
+            grid-template-rows: 30px 30px 50px 30px 60px  ;
+            /*background: greenyellow;*/
+            grid-template-columns: 100px 100px 200px 200px 100px ;
+            /*grid-template-rows: 1fr 1fr 1fr;*/
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+        
+        }
+        .item1 {
+            background: indianred;
+        }
+        .item2 {
+            background: green;
+        }
+        .item3 {
+            background: yellowgreen;
+        }
+        .item4 {
+            background: rebeccapurple;
+        }
+        .item5 {
+            background: red;
+        }
+
+        div:first-child {
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item1">YASH</div>
+        <div class="item2">AD</div>
+        <div class="item3">SWARA</div>
+        <div class="item4">ASHU</div>
+        <div class="item5">CHERRY</div>
+    </div>
+</body>
+</html>

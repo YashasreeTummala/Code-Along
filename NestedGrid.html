@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            /*grid-template-columns: repeat(4, 1fr);*/
+            /*grid-row-gap: 1em;
+            grid-column-gap: 1em;*/
+            grid-gap: 1em;
+            /*grid-template-rows: 50vh 50vh;*/
+            grid-auto-rows: minmax(100px, auto);
+            /*When overflow the content it adjust automatically*/
+            /*justify-items: start;
+            align-items: end;*/
+
+        }
+
+        #div1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+
+        #div1 div {
+            border: 1px solid black;
+        }
+
+        .grid-container>div {
+            padding: 1em;
+            background-color: salmon;
+
+        }
+        .grid-container>div:nth-child(even) {
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="div1">
+            <div>yash11</div>
+            <div>yash22</div>
+            <div>yash33</div>
+            <div>yash11</div>
+            <div>yash22</div>
+            <div>yash33</div>
+            <div>yash11</div>
+            <div>yash22</div>
+            <div>yash33</div>
+        </div>
+        <div>yash1</div>
+        <div>yash2</div>
+        <div>yash3</div>
+        <div>yash4</div>
+        <div>yash5</div>
+    </div>
+</body>
+</html>
