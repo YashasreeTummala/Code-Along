@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    overflow: hidden;
+}
+
+nav, .nav-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav {
+    background-color: #edeef0;
+    min-height: 8vh;
+    padding: 0 50px;
+}
+
+.nav-links-container {
+    list-style: none;
+    width: 40%;
+}
+
+.nav-links-container li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+
+}
+
+#logo {
+    color: #f05136;
+    font-size: 2.2em;
+
+}
+
+.burger div {
+    background-color: black;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+.burger {
+    display: none;
+}
+
+
+@media screen and (max-width:768px)  /* Break Point*/
+{
+
+  .burger {
+      display: block;
+  }  
+    .nav-links-container {
+        position: absolute;
+        right: 0;
+        top : 8vh;      /*nav min-height: 8vh; */
+        height: 92vh;   /* takes teh entire page (8+92) */
+        background-color: #edeef0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        transform: translateX(100%);
+    }
+
+    .nav-links-container li {
+        opacity: 0%;
+    }
+
+    .nav-clicked {
+        transform: translateX(0%);
+        
+    }
+} 
+
+
+.burger-clicked #line1 {
+    transform: rotate(45deg) translate(5px);
+}
+
+.burger-clicked #line2 {
+    display: none;
+}
+
+.burger-clicked #line3 {
+    transform: rotate(-45deg) translate(5px);
+}
+
+@keyframes navLinkAnimation {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
